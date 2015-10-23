@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shiny App - Interactive Dataset Explorer</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Shiny App - Interactive Dataset Explorer">
+  <meta name="author" content="by 08costan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Shiny App - Interactive Dataset Explorer</h1>
+    <h2>My personal course project for &quot;Developing Data Products&quot; class</h2>
+    <p>by 08costan<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>R includes an awful lot of base datasets...</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>As part of Coursera&#39;s Data Science Specialization, recall we have been working on &quot;mtcars&quot;, &quot;InsectSprays&quot; or &quot;swiss&quot; datasets</p></li>
+<li><p>There is a lot more data to explore (104 datasets using data() function)</p></li>
+<li><p>Here are the first few of the list:</p></li>
+</ul>
+
+<pre><code class="r">data()$results[,3][1:10]
+</code></pre>
+
+<pre><code>##  [1] &quot;AirPassengers&quot;          &quot;BJsales&quot;               
+##  [3] &quot;BJsales.lead (BJsales)&quot; &quot;BOD&quot;                   
+##  [5] &quot;CO2&quot;                    &quot;ChickWeight&quot;           
+##  [7] &quot;DNase&quot;                  &quot;EuStockMarkets&quot;        
+##  [9] &quot;Formaldehyde&quot;           &quot;HairEyeColor&quot;
+</code></pre>
+
+<pre><code class="r"># Using data() without anything specified will let you browse the full dataset list
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Exploring these datasets takes some time</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>It takes time to load a dataset, understand its purpose, view the first few observations...</p>
+
+<pre><code class="r">data(CO2)
+head(CO2,n=5)
+</code></pre>
+
+<pre><code>##   Plant   Type  Treatment conc uptake
+## 1   Qn1 Quebec nonchilled   95   16.0
+## 2   Qn1 Quebec nonchilled  175   30.4
+## 3   Qn1 Quebec nonchilled  250   34.8
+## 4   Qn1 Quebec nonchilled  350   37.2
+## 5   Qn1 Quebec nonchilled  500   35.3
+</code></pre>
+
+<p>It appears to be necessary to pull out the help page to understand what this dataset is all about:</p>
+
+<pre><code class="r">?CO2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Why not a shiny app for a quick browse?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I made a shinyapp for this purpose:</p>
+
+<ul>
+<li><p>It is easier to pick a R base dataset</p></li>
+<li><p>It is more user-friendly and interactive than a line of code</p></li>
+<li><p>You will have direct access to the data + help page of the dataset</p></li>
+</ul>
+
+<p>Who knows? With more time we could imagine other functions:</p>
+
+<ul>
+<li><p>An interactive menu to select variables to plot</p></li>
+<li><p>An interactive menu to select explanatory variables and fit linear models</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Please have a look!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Please have a look at my course project here:</p>
+
+<p><a href="https://costan08.shinyapps.io/myapp">https://costan08.shinyapps.io/myapp</a></p>
+
+<p>Source code can be found on my Github repository:</p>
+
+<p><a href="https://github.com/08costan/developing-data-products">https://github.com/08costan/developing-data-products</a></p>
+
+<p>Thank you for your attention!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='R includes an awful lot of base datasets...'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Exploring these datasets takes some time'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Why not a shiny app for a quick browse?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Please have a look!'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
